@@ -4,15 +4,15 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
-import { InfoProvider } from "./Components/Context";
+import { LoginProvider } from "./Components/LoginContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <InfoProvider>
+    <LoginProvider>
       <Router>
         <App />
-      </Router>
-    </InfoProvider>
+      </Router>{" "}
+    </LoginProvider>{" "}
   </React.StrictMode>,
   document.getElementById("root")
 );
