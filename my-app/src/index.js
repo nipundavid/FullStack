@@ -5,14 +5,21 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
 import { LoginProvider } from "./Components/LoginContext";
-
+import { DataProvider } from "./Components/DataContext";
 ReactDOM.render(
   <React.StrictMode>
-    <LoginProvider>
+    {/* <LoginProvider>
       <Router>
         <App />
-      </Router>{" "}
-    </LoginProvider>{" "}
+      </Router>
+    </LoginProvider> */}
+    <LoginProvider>
+      <DataProvider>
+        <Router>
+          <App />
+        </Router>
+      </DataProvider>
+    </LoginProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

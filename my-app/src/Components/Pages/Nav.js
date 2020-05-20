@@ -10,41 +10,29 @@ function NavBar(props) {
         className="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarTogglerDemo01"
-        aria-controls="navbarTogglerDemo01"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        {/* The hamburger icon */}
+        {/* <span className="navbar-toggler-icon" /> */}
         <i className="fas fa-bars" style={{ color: "#fff" }}></i>
       </button>
-      {/* <span className="navbar-toggler-icon" /> */}
-      {props.name}
-
-      <div className="collapse navbar-collapse ml-5" id="navbarTogglerDemo01">
-        <Link className="navbar-brand" href="#"></Link>
-        <div className="container justify-content-center">
-          <ul className="navbar-nav m-auto mt-2 mt-lg-0">
-            <li className="nav-item active">
-              <Link className="nav-link text-white  ml-5" to="/">
-                Home &nbsp;<i className="fas fa-home"></i>
-                <span className="sr-only">(current)</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-white  ml-5" to="/news">
-                News
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-white  ml-5" to="/contacts">
-                Contact Us
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <form className="form-inline my-2 my-lg-0">
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto ml-5">
+          <li className="nav-item active">
+            <Link className="nav-link text-white" to="/">
+              Home&nbsp;<i className="fas fa-home"></i>{" "}
+              <span className="sr-only">(current)</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link text-white" to="/contact">
+              Contact
+            </Link>
+          </li>
+        </ul>
+        <form className="form-inline my-2 my-lg-0 ml-5">
           <input
             className="form-control mr-sm-2"
             type="search"
