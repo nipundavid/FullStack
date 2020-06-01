@@ -1,8 +1,11 @@
 import React, { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Switch, Route } from "react-router-dom";
 import Login from "./Components/Pages/Login";
 import Home from "./Components/Pages/Home";
 import Nav from "./Components/Pages/Nav";
+import Details from "./Components/Pages/Details";
+import PageNotFound from "./Components/Pages/PageNotFound";
 import { LoginContext } from "./Components/LoginContext";
 import { DataContext } from "./Components/DataContext";
 
@@ -15,13 +18,17 @@ function App() {
   return (
     <div>
       <Nav />
-      {!isoggedIn ? (
-        <Login />
-      ) : (
-        <div>
-          <Home />
-        </div>
-      )}
+      <Switch>
+        {!isoggedIn ? (
+          <Route exact path="/" component={Login}></Route>
+        ) : (
+          <div>
+            <Route exact path="/" component={Home}></Route>
+            <Route path="/details" component={Details}></Route>
+            <Route path="/PageNotFound" component={PageNotFound}></Route>
+          </div>
+        )}
+      </Switch>
     </div>
   );
 }

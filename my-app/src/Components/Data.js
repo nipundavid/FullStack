@@ -50,7 +50,7 @@ export const Data = [{
     },
     {
         id: 6,
-        headerTitle: 'Deserunt consequatur',
+        headerTitle : 'Deserunt consequatur',
         headerSubTitle: 'Lorem ipsum dolor sit amet consectetur.',
         headerText: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi a voluptatem nostrum dolore necessitatibus, nisi provident placeat officia rerum saepe laudantium quod sunt animi cum porro eligendi molestias, ut quisquam.',
         title: 'Animi nobis',

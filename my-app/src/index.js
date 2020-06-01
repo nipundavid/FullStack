@@ -8,18 +8,13 @@ import { LoginProvider } from "./Components/LoginContext";
 import { DataProvider } from "./Components/DataContext";
 ReactDOM.render(
   <React.StrictMode>
-    {/* <LoginProvider>
-      <Router>
-        <App />
-      </Router>
-    </LoginProvider> */}
-    <LoginProvider>
-      <DataProvider>
-        <Router>
+    <Router>
+      <LoginProvider>
+        <DataProvider>
           <App />
-        </Router>
-      </DataProvider>
-    </LoginProvider>
+        </DataProvider>{" "}
+      </LoginProvider>{" "}
+    </Router>{" "}
   </React.StrictMode>,
   document.getElementById("root")
 );
