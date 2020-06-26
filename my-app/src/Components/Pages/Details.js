@@ -19,7 +19,7 @@ const Details = (props) => {
       <div>
         <h1>{dataItem.id}</h1>
       </div>{" "}
-    </React.Fragment>
+    </React.Fragment> 
   );
 };
 
